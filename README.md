@@ -23,6 +23,17 @@ Documentation that outlines processes used, branching stategies employed and oth
 ---
 #### Q2	What are the most important aspects of quality software?
 
+Functionality - The software need to meet the requirements of the users providing features that compliment the user experience. It needs to do this both efficienty and accurately. Taking a web browser as an example features such as the addition of tabs, bookmarking sites and web extensions all add functionality while still maintaining a smooth and responsive browsing experience.
+
+Reliability - Having a robust platform that not only dependable but consistant and predictable in it's behaviour. This includes it's ability to handle errors gracefully. We expect that a web browser would work on many different hardware setups. That when the internet is down it will provide us with the same message and point us in the direction of how to fix the problem. That when we log back in the bookmarks that are saved should still be there.
+
+Usability - Needs to be user-friendly. This could include intuitive interfaces, clear instruction and efficient workflows. Accessabilty for disabilities, keyboard shortcuts etc also add to the usability of an application. A good example of usability might be a search bar being shown on shopping website that when people use it will find things with the key word search.
+
+Efficiency - The use of system resources should be kept to a minimum and avoid wasted computational power in performing a task while also being fast. Efficient programs properly balance these two aspects. To improve efficiency many underlying techniques can be used such as improving the algoririthm complexity, caching, compiling code or multithreading as well as choosing the correct programming language or databasing methodoligy. The V8 engine which runs in google chrome for example creates efficiency by compiling javascript into machine code improving web application excecution speed.
+
+Security - People want their data protected from unauthorized access. Good software implementation uses encryption, authentication and authorization to safeguard sensitive data as well as maintain the integrity of it. With cyber criminals adapting to global change so too does the security implementations being used. Logging into a government website might take not only a password but a securely sent text message with a number of digits.
+
+Maintainability - Is the software structure well designed and easy to adapt? we want to see DRY, modular code alongside well written documentation. This will make any updates, enhancements, bug fixes alot easier to apply. This is crucial to ensuring the longevity of a product. Many frameworks for building applications provide architucture models to help with maintainability. For example developers of Flask applications often adopt an MTV (model-template-view) archetecture by convention to improve the maintainablity of the code. 
 
 
 ---
@@ -32,11 +43,50 @@ Documentation that outlines processes used, branching stategies employed and oth
 
 
 
+The acrynym MERN stands for MongoDB, Express.js, React, Node.js.
+
+MongoDB is noSQL database management system that serves to hold the persistant data of the application. Express.js is the framework that is used to simplify the process of building an API that will connect to this database. Node.js is the environment that executes all of the JavaScript on the server side handling all the logic, routing and interactions with the database. React is used to build our front-end that will communicate with the API built by Express.js and the rest of the backend logic. 
+
+1. project root
+* app.js - entry point. sets up all of the connections and defines the routes.
+* package.json - lists dependancies of the code, commands, name, licensing etc.
+* .env - houses all of the environement variables including database connection strings, API's and security keys
+2. Backend - Epress.js & Node.js
+* config
+*controllers
+*routes
+*models
+3. Frontend - React
+* components
+* 
+
+4. Database - MongoDB
+* cluster and database setup
+* models
+
+
+
+
 ---
 
 ---
 #### Q4	A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
+Depending on the scale and goals of the small business it might be best to opt into a website building solution. If we are looking for scalability and custom solution however an understanding of Web development languages is where we should start. This includes but both HTML and CSS which are fundemental for structuring and styling web pages as well as Javascript for adding interactivity.  Alongside these basics it would be important to gain a solid understanding of the following,
+
+1. Version Control - This is so the team can work collaboratively and track changes to the project. One of the most prominent forms of version control being GIT and the basics should be atleast developed.   
+2. A frontend Framework/Library - Depending on what the business is looking for in terms of responsiveness and user interface. There are a range of options of the market including React, Angular, Vue.js.
+3. Backend and developement - Select a backend technology that is suitable for the team. Node.js pair well with React for example. Others such as Flask or Ruby on Rails could be viable options but would require learning additional programming languages. 
+4. server-Side development - knowledge of server-side frameworks i.e. Express.js,Django,Flask. This is to handle any HTTP requests, business logic etc.
+5. Database management - Understanding of how databases store data and how to retrieve that data.
+6. Web API's - knowledge of how to interact and build API's.
+6. An understanding of Websecurity - how to build and design your site so that it can be safe from cyber attacks as well as maintain integrity of user/client data.
+7. Deployment and Webhosting - the understanding of how to deploy the website for others to access. Common hosting sites.
+8. Testing - knowledge of how to test and use testing tools eg. Jest to ensure the website is working accordingly
+9. Documentation
+10. A skillset in troubleshooting and adaptabilty to come up with solutions to problems.
+
+Alongside these fundemental concepts of programming the team should also develop skills in communication, project management and a little graphic design where needed. Learning and applying agile methodoligy to the build would also help to streamline the process. 
 
 ---
 
@@ -44,12 +94,42 @@ Documentation that outlines processes used, branching stategies employed and oth
 
 #### Q5	With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
 
+The Project I will mention is the T1A3. I build a Stocktake terminal application
+
+1. Project management, and methodololigy
+In term 1 I was tasked to build a terminal application. To even begin the project I needed to understand basic development patterns (agile methodoligy) and use a project management tool. I opted for Trello and layed out the project into tasks for completion. 
+2. Git version control and record keeping
+After laying out the general direction of the project I setup a remote repository on github and started pushed the local code that I started with to it. This was to start a pattern of recordkeeping.
+3. WSL - Ubuntu
+Considering the application was for the terminal it was important to gather an understanding of terminal commands. In my case bash commands to move around and create folders etc. This was made easier with the use of visual studio code. 
+4. Shell scripting, virtual environment
+I wrote a shell script to initialize the application so I had to gain the knowledge what a shell script was as well as the commands to achieve what I needed. The purpose of the shell script was to create a virtual environment and start the application, so I had to understand the why that was important as well as how different versions of software could affect the working of the application. As well as how packages would be installed inside of the virtual environment to keep it consistant across machines using the application. 
+5. Javascript
+The core of the program was written in python so I needed to learn that. 
+- Functions, how to make my own as well as what inbuilt functions and methods already existed in python.
+- Control flow. The main loop hold the menu which would access different parts of the program. Using logical operators, loops, if statements, try blocks etc. I was able to manipulate the flow of the program to suit the needs of the user.
+- CSV and file manipulation - Rudementary understanding of document manipulation. This was touched on during classwork but I had to go to the internet/chatGPT to gain a better understanding of this to overcome the issue of data storage. 
+- imports and package management
+Need to understand what is available in the core of python that I could import direct and that which I needed to find and add. Also understand how to add and use and read documentation for implementing it. Tabulate is a example of this from outside core python used in my application.
+- Styling - I wanted to implement different colours and styling so I also learnt a bit about ANSI escape codes. As well as the tabulate module to show the tables in nicer way.
+- Improve user experience - I learnt about the time module to give users more time to read actions taking place before resetting the terminal. 
+6. Documentation
+The process of documenting all of the functionality of the program was a skillset needed to ensure that users understood the program and it's uses. I did this in the readme.md
+7. Testing
+I had to develop a strong testing mindset to make sure that all of the functionality that I was developing actually worked. Pytest was used to setup automated tests designed for core functionality but I also did quite a bit of manual testing.
+
 
 ---
 
 ---
 
 #### Q6	With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
+
+Looking at the same T1A3 project. I believe my skillset on the onset of project was sufficient leaving enough room for me to grow and learn new things throughout. 
+
+I would say I had a basic understanding of Project management, Git version control, WSL terminal commands, JavaScript but was lacking in testing and documentation processes.
+
+
 
 ---
 
@@ -87,12 +167,70 @@ printWorld("run") // A function like this one will tranfer the execution
 ---
 #### Q8	Explain type coercion, using examples from the JavaScript programming language
 
+Type coercion refers to the conversion of values from one data type to another. In particular JavaScript is known as loosely-typed meaning that variables can hold values of any data type and the intepreter will attempt to convert these values when involving other data types rather than immediately spiting out an erro. This is also known as implicit type conversion. Developers can als0 do this intentionally or explicitly. 
 
+Example of implicit conversion
+```
+let i = 2; //data type: number
+let j = "5"; //data type: string
+let result = num + string; //coerces j from being a number to a string and concatenates
+console.log(result) //output : "25" 
+
+```
+Example of explicit conversion
+```
+let i = 36; //data type: number
+let j = "4" // data type: string
+let result = Number(String) + num; //changes j from a string to a number and performs math addition
+console.log(result) // output : 40
+
+```
+Due to implicit type conversion, JavaScript users may experience unexpected behaviour if they are not aware of how to handle the situation accordingly. For example Equality operators have two variants, ```==``` which allows implicit conversion and ```===``` which does not and this could product wildly different results under the right circumstances.
 
 ---
 
 ---
 #### Q9	Explain data types, using examples from the JavaScript programming language
+
+Data types are the type of value that is being used or being held by a variable. The data type is important for understanding how something is handled within the language. Lets look at the case of the following 2 code snippets ```let a = 2 + 2``` or ```let a = "2" + "2"```. The first shows 2 numbers that are added together and will result in a 4. The second takes two strings and concatenates them together to result in "22". Both look similiar but because the data type is different the "+" operator behaves differently creating different outcomes. JavaScript has a several different data types as follows; Numbers, Strings, Booleans, Undefined, Null, Symbols and Objects.
+
+Numbers - unlike other languages Javascript only has one type of number stored in a 64-bit floating point. Integers are acurrate up to 15 digits and floating point arithmetic is not always accurate.
+```
+let Integer = 55
+let FloatingPoint = 7.32
+```
+String - represent text and are stored between quotation marks
+```
+let greeting = "Sup, my Friend"
+```
+Boolean - logical operator with only two values of either true or false
+```
+let isTrue = true
+let isFalse = false
+```
+Undefined - uninitialized or undefined value
+```
+let awesomeVariable;
+console.log(awesomeVariable) // output: undefined
+```
+Null - intentional absence of value
+```
+let nullValue = null;
+```
+Symbol - A unique and immutable identifier
+```
+let uniqueSymbol = Symbol("unique")
+```
+Object - A collection of key-value pairs. key values are represented as strings where as values can be whatever datatype.
+```
+let petFish = {
+  name: "Steven",
+  species: "Black tetra",
+  age: 5,
+  isFood: false
+}
+
+```
 
 
 
@@ -126,30 +264,30 @@ printWorld("run") // A function like this one will tranfer the execution
 ---
 
 ```
-class Car {
-  constructor(brand) {
-    this.carname = brand;
+class Car { // initializes the class template for Car
+  constructor(brand) { //special class method to build the object of the template. brand is a parameter that needs to be passed while initiaziling a new instance in future
+    this.carname = brand; //this refers to the current object being constructed with carname as the key and brand as the value.
   }
-  present() {
-    return 'I have a ' + this.carname;
-  }
-}
-
-class Model extends Car {
-  constructor(brand, mod) {
-    super(brand);
-    this.model = mod;
-  }
-  show() {
-    return this.present() + ', it was made in ' + this.model;
+  present() { // this is the creation of a class method
+    return 'I have a ' + this.carname; // concatenates a string of with the brand taken from the initialization fo the object. whatever this method is applied to will be the object that this represents and will look for the key carname to return its value.
   }
 }
 
-let makes = ["Ford", "Holden", "Toyota"]
-let models = Array.from(new Array(40), (x,i) => i + 1980)
+class Model extends Car { //initialize a new class template taking elememnts from a the parent class of Car
+  constructor(brand, mod) { // Same as earlier but takes an additional parameter called mod
+    super(brand); //used to invoke the constructer of the parent class Car
+    this.model = mod; //additional key-value specific to the Car class objectst that will be created.
+  }
+  show() { //another class method. this one is for the model class. will not work on the parent car class.
+    return this.present() + ', it was made in ' + this.model; //returns a concatenated string of that invokes the parent class method present on the object to return the carname. it adds this to some words and then the model of value of the object is is called against.
+  }
+}
 
-function randomIntFromInterval(min,max) { // min and max included
-    return Math.floor(Math.random()*(max-min+1)+min);
+let makes = ["Ford", "Holden", "Toyota"] // An array of car brands. 
+let models = Array.from(new Array(40), (x,i) => i + 1980)// Make a new Array 40 long without any values. From that array make another new array by iterating through each of the values adding the value of the index and 1980 to it. This creates a array of years ranging from 1980 to 2019 and stores it in models.
+
+function randomIntFromInterval(min,max) { // min and max included // a function to determine a random interval. takes two parameters.
+    return Math.floor(Math.random()*(max-min+1)+min); // 
 }
 
 for (model of models) {
