@@ -259,7 +259,7 @@ for (i = 0; i < newFishArray.length; i++) { //iterates over each item of the arr
 
 #### Q11	Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
 ---
-Objects are a collection of key-value pairs. To access different values of the properties we can either use dot notation e.g. ```object.key``` or bracket notation ```object['key']```. Both point to value that relates to the key but it cirmcustances where special characters or spaces are in the key value you will have to use bracket notation. Objects can be modified using a variety of different methods examples below.  
+Objects are a collection of key-value pairs. Keys are always strings but the values can be any datatype in the JavaScript programming language allowing us to modify what is set in those keys by using methods related to the specific data type. To access different values of the properties we can either use dot notation e.g. ```object.key``` or bracket notation ```object['key']```. Both point to value that relates to the key but it cirmcustances where special characters or spaces are in the key value you will have to use bracket notation. Examples of Object modification is as below.  
 
 ```
 let car = {
@@ -317,8 +317,44 @@ newCar = new Car('Nissan', 'Navara', 1998) // makes a new object following the C
 
 #### Q12	Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
 
-
 ---
+To manipulate JSON we typically parse the data into a native JavaScript object and then apply changes using object methods. see Q11 answer for further details. 
+
+When working with promises we are often receiving data in json format that we can covert quickly
+```
+response.json() //converts a received response from an API into a javascript object
+```
+But it's not always that simple and we may be required to convert it ourselves. This is where we need to use the built in JSON object and it's related methods to manipulate the data to the format we require.
+```
+let jsonString = '{
+  "species": "Oak",
+  "age": 50,
+  "height": 20,
+  "trunkDiameter": 1.2,
+}
+
+let tree = JSON.parse(jsonString); //converts JSON to a JavaScript object, you could modify the object using different object methods discussed in Q11.
+
+tree.age = 51
+
+let newJsonString = JSON.stringify(tree) //convert to a json string
+
+```
+Error handling when working with JSON is particularly critical as this is often user/external input into the code. We need to make sure that it is usable.
+```
+let invalidJsonString = '{"name": "Frank", "age": }'; //no age input making it invalid
+
+try {
+  let invalidObject = JSON.parse(invalidJsonString);
+  console.log(invalidObject); // This won't be reached in case of an error
+} catch (error) {
+  console.error('Error parsing JSON:', error.message);
+}
+```
+
+
+
+
 
 ---
 
